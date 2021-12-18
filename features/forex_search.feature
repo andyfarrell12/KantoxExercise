@@ -1,5 +1,5 @@
 
- Feature: Extra Forex Search Test
+Feature: Extra Forex Search Test
 
   Background:
 
