@@ -13,7 +13,7 @@ And('I am directed to {string}') do |string|
     visit string
 end
 
-When('I login with username {string}') do |string|
+When('I login with email {string}') do |string|
   sleep 2
   @page.landing_page.login_email_entry string
 end

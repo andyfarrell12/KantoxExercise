@@ -18,4 +18,8 @@ class SearchResultsPage
     first('[class="gigya-error-msg gigya-error-msg-active gigya-error-code-400027 gigya-error-type-server"]').text
   end
 
+  def successful_register
+    find('[class="gigya-label-text gigya-composite-control gigya-composite-control-label main-text"]').text
+  end
+
 end
