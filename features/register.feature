@@ -77,7 +77,7 @@ Scenario Outline: <testId> (Negative Test) Passwords do not match
 
 ## -----------------------------------------------------------------------------
 
-Scenario Outline: <testId> (Negative Test) As a new user I should be able to register
+Scenario Outline: <testId> (Negative Test) Term box remains unticked when registering
 
   # random string is put before email to make email unique
   When I register with new email "<email>"
