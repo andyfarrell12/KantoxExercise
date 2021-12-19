@@ -31,8 +31,8 @@ Feature: Login Tests
    | 2      | @gmail.com              |  Password1 | # incorrect email
    | 3      | £&£@gmail.com           |  Password1 | # incorrect email
    | 4      | 133@gmail.com           |  Password1 | # incorrect email
-   | 5      | test23                  |  Password1 | # incorrect email
-   | 6      | a.com                   |  Password1 | # incorrect email
+   | 5      | test24                  |  Password1 | # incorrect email
+   | 6      | b.com                   |  Password1 | # incorrect email
    | 7      | test98@gmail.com        |  Pass      | # incorrect password
    | 8      | test35@gmail.com        |  123       | # incorrect password
 
