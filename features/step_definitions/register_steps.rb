@@ -43,3 +43,43 @@ Then('success message shown') do
 end
 
 # ------------------------------------------------------------------------------
+## invalid email Tests
+
+When('I register with invalid email {string}') do |string|
+  sleep 2
+  @page.landing_page.register_incorrect_email_entry string
+end
+
+Then('email error is shown {string}') do |string|
+  expect(@page.search_results_page.email_error_string).to eql string
+end
+
+# ------------------------------------------------------------------------------
+## missing mandatory field
+
+When('I register email {string}') do |string|
+  sleep 2
+  @page.landing_page.register_incorrect_email_entry string
+end
+
+Then('missing field error is shown {string}') do |string|
+  expect(@page.search_results_page.register_error_string).to eql string
+end
+
+# ------------------------------------------------------------------------------
+## password match Tests
+
+Then('password match error is shown {string}') do |string|
+  expect(@page.search_results_page.register_error_string).to eql string
+end
+
+# ------------------------------------------------------------------------------
+## Do not click accept terms test
+
+And('Do Not agree to terms and click register') do
+  @page.landing_page.click_register
+end
+
+Then('terms box is highlighted red') do
+  @page.search_results_page.terms_error
+end

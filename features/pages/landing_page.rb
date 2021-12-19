@@ -64,4 +64,13 @@ class LandingPage
     find('[type="submit"]').click
   end
 
+  def register_incorrect_email_entry string
+    find('[name="email"]').click
+    find('[name="email"]').set(string)
+  end
+
+  def click_register
+    find('[type="submit"]').click
+  end
+
 end

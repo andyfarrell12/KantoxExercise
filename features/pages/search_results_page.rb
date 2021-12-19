@@ -22,4 +22,16 @@ class SearchResultsPage
     find('[class="gigya-label-text gigya-composite-control gigya-composite-control-label main-text"]').text
   end
 
+  def email_error_string
+    find('[class="gigya-error-msg gigya-error-msg-active gigya-error-code-400009 gigya-error-type-server"]').text
+  end
+
+  def register_error_string
+    find('[role="alert"]').text
+  end
+
+  def terms_error
+    find('[class="gigya-composite-control gigya-composite-control-checkbox gigya-terms-error"]')
+  end
+
 end

@@ -21,26 +21,26 @@ Feature: Login Tests
 
  Scenario Outline: <testId> (Negative Tests) Invalid login details entered
 
-  When I login with username "<email>"
+  When I login with email "<email>"
   And enter password "<password>" and click log in
   Then I should see error "Invalid login or password"
 
   Examples:
    | testId | email                   |  password  |
-   | 1      | test27@gmail.com        |  Password1 | # incorrect email
+   | 1      | test24@gmail.com        |  Password1 | # incorrect email
    | 2      | @gmail.com              |  Password1 | # incorrect email
    | 3      | £&£@gmail.com           |  Password1 | # incorrect email
    | 4      | 133@gmail.com           |  Password1 | # incorrect email
    | 5      | test23                  |  Password1 | # incorrect email
    | 6      | a.com                   |  Password1 | # incorrect email
-   | 7      | test97@gmail.com        |  Pass      | # incorrect password
-   | 8      | test34@gmail.com        |  123       | # incorrect password
+   | 7      | test98@gmail.com        |  Pass      | # incorrect password
+   | 8      | test35@gmail.com        |  123       | # incorrect password
 
 # ------------------------------------------------------------------------------
 
  Scenario Outline: <testId> (Negative Tests) Missing mandatory login data
 
-  When I login with username "<email>"
+  When I login with email "<email>"
   And enter password "<password>" and click log in
   Then I should see missing field error "This field is required"
 
